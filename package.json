@@ -1,0 +1,19 @@
+{
+  "name": "solar-cost-reduction-backend",
+  "version": "1.0.0",
+  "description": "Backend API for solar panel cost reduction suggestions",
+  "main": "api/solar-suggestions.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["vercel", "serverless", "groq", "solar", "ai"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "groq-sdk": "^0.7.0"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}
