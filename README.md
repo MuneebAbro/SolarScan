@@ -1,46 +1,57 @@
-<p align="center">
-  <img src="sola.png" width="180" alt="SolarScan Logo" />
-</p>
+# ⚡ SolarScan API
 
-# ☀️ SolarScan
-
-**SolarScan** is a smart web app that helps users analyze their electricity bills and discover how much solar power they need to slash their energy costs ⚡  
-
-Built with **React + TypeScript**, **SolarScan** combines clean design with powerful solar analytics — powered by a custom **[SolarScan API backend](https://github.com/MuneebAbro/SolarScan)** for advanced bill parsing and solar recommendations.
-
+**SolarScan API** is the intelligent backend engine that powers the [SolarScan](https://github.com/MuneebAbro/SolarScan_Website) web app.  
+It reads electricity bills, extracts data using AI, and provides personalized solar recommendations — showing system size, cost, savings, payback time, and environmental impact.
 
 ---
 
 ## 🚀 Features
-- 💡 Enter monthly bill data for instant analysis  
-- ☀️ Calculate recommended solar kW  
-- 📈 View cost breakdowns and potential savings  
-- 🔆 Responsive and modern UI powered by Tailwind CSS  
-- 🧠 Simple yet intelligent solar estimation logic  
+- 🧾 **Smart Bill Parsing** — Uses Groq’s LLM to analyze and extract data from bill text.  
+- ☀️ **Solar Recommendation Engine** — Calculates ideal solar system size (kW).  
+- 💰 **ROI & Payback Estimator** — Shows installation cost, savings, and return time.  
+- 🌿 **Sustainability Metrics** — Estimates annual CO₂ reduction for each user.  
+- 💸 **Budget Mode** — Suggests partial setups if the user provides a smaller budget.  
+- 📊 **Structured JSON Output** — Perfect for frontend or mobile integration.  
 
 ---
 
-## 🛠️ Tech Stack
-- **React (Vite)**  
-- **TypeScript**  
-- **Tailwind CSS**  
-- **shadcn/ui**  
-- **Chart.js**  
+## 🧠 How It Works
+1. User uploads or scans an electricity bill in the SolarScan web app.  
+2. The API parses usage, cost, and tariff information.  
+3. It factors in local solar installation costs in **Pakistan 🇵🇰**.  
+4. Returns clean, structured solar recommendations and energy insights.
 
 ---
 
-## 🎯 Project Goals
-- Make solar planning effortless for everyday users  
-- Visualize energy costs and savings clearly  
-- Promote clean energy awareness through tech  
+## 🔧 Tech Stack
+- **Runtime:** Node.js  
+- **Language:** JavaScript / TypeScript  
+- **Framework:** Next.js API-style handler  
+- **AI Model:** Groq LLaMA-3.3-70B-Versatile  
+- **Hosting:** Vercel / Render / Cloudflare Workers  
+
+---
+
+## ⚙️ Environment Variables
+| Variable | Description |
+|-----------|--------------|
+| `GROQ_API_KEY` | Your Groq API key for LLM responses |
+| `NODE_ENV` | Set to `production` or `development` |
+
+---
+
+## 💚 Purpose
+Designed for **green energy innovation**, **cost efficiency**, and **climate sustainability**.  
+The goal: make solar adoption simpler, smarter, and financially transparent for everyone.
 
 ---
 
 ## 👨‍💻 Author
 **Muneeb Abro**  
-Crafted with ☀️ passion and 💻 caffeine.  
+Frontend: [SolarScan Web App](https://github.com/MuneebAbro/SolarScan_Website)  
+Backend: [SolarScan API]()  
 
 ---
 
 ## 📜 License
-Open source under the [MIT License](LICENSE).
+Licensed under the [MIT License](LICENSE).
