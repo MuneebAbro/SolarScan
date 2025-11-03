@@ -1,8 +1,8 @@
-import Groq from 'groq-sdk';
+const Groq = require('groq-sdk');
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
 	// CORS for web/app usage
 	res.setHeader('Access-Control-Allow-Credentials', true);
 	res.setHeader('Access-Control-Allow-Origin', '*');
