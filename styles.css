@@ -1,15 +1,128 @@
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; line-height: 1.4; }
-.card { max-width: 940px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; }
-h1 { font-size: 22px; margin: 0 0 16px; }
-label { display: block; margin: 12px 0 6px; font-weight: 600; }
-input[type="file"], input[type="number"], textarea { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; }
-textarea { min-height: 120px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-button { appearance: none; border: 0; background: #111827; color: white; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
-button:disabled { opacity: 0.5; cursor: not-allowed; }
-.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
-.grow { flex: 1 1 280px; min-width: 280px; }
-.small { flex-basis: 220px; min-width: 220px; }
-.muted { color: #6b7280; font-size: 12px; }
-pre { background: #0b1020; color: #d1e7ff; padding: 12px; border-radius: 8px; overflow: auto; }
-.divider { height: 1px; background: #e5e7eb; margin: 16px 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.grow {
+  flex: 1;
+}
+
+.small {
+  max-width: 200px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="file"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+  font-family: monospace;
+}
+
+button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #5568d3;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.divider {
+  height: 2px;
+  background: #e0e0e0;
+  margin: 2rem 0;
+}
+
+.muted {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+#status {
+  margin-bottom: 1rem;
+  min-height: 1.5rem;
+}
+
+#result {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  max-height: 400px;
+  overflow-y: auto;
+}

@@ -17,12 +17,7 @@ module.exports = async function handler(req, res) {
 		return;
 	}
 
-	// Redirect GET to static demo page
-	if (req.method === 'GET') {
-		res.writeHead(302, { Location: '/' });
-		res.end();
-		return;
-	}
+	
 
 	if (req.method !== 'POST') {
 		return res.status(405).json({ error: 'Method not allowed' });
